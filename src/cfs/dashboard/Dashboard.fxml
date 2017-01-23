@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="169.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cfs.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cfs.dashboard.DashboardController">
    <children>
       <Label layoutX="53.0" layoutY="32.0" text="Serial Port:" />
       <TextField layoutX="133.0" layoutY="27.0" />
@@ -14,7 +14,28 @@
       <Label layoutX="70.0" layoutY="98.0" text="Topics:" />
       <Button fx:id="Start" layoutX="316.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Start" />
       <Label layoutX="126.0" layoutY="68.0" text="XX-XX-XX-XX-XX-XX" />
-      <Button layoutX="316.0" layoutY="93.0" mnemonicParsing="false" text="Button" />
-      <CheckBox layoutX="180.0" layoutY="124.0" mnemonicParsing="false" text="CheckBox" />
+      <Button fx:id="Stop" layoutX="367.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Stop" />
+      <CheckBox layoutX="193.0" layoutY="98.0" mnemonicParsing="false" text="CheckBox" />
+      <ComboBox layoutX="178.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 8" />
+      <ComboBox layoutX="342.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 15" />
+      <ComboBox layoutX="178.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 9" />
+      <ComboBox layoutX="178.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 10" />
+      <ComboBox layoutX="178.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 11" />
+      <ComboBox layoutX="178.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 12" />
+      <ComboBox layoutX="178.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 13" />
+      <ComboBox layoutX="14.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 1" />
+      <ComboBox layoutX="14.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 2" />
+      <ComboBox layoutX="14.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 3" />
+      <ComboBox layoutX="14.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 4" />
+      <ComboBox layoutX="14.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 5" />
+      <ComboBox layoutX="14.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 6" />
+      <ComboBox layoutX="14.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 7" />
+      <ComboBox layoutX="178.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 14" />
+      <ComboBox layoutX="342.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 16" />
+      <ComboBox layoutX="342.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 17" />
+      <ComboBox layoutX="342.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 18" />
+      <ComboBox layoutX="342.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 19" />
+      <ComboBox layoutX="342.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 20" />
+      <ComboBox layoutX="342.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 21" />
    </children>
 </AnchorPane>
