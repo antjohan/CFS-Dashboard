@@ -5,8 +5,7 @@
  */
 package cfs.dashboard;
 
-import com.fazecast.jSerialComm.SerialPort;
-import java.io.InputStream;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -30,27 +29,11 @@ public class DashboardController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         Start.setOnAction((event) -> {
+        Read_UART UART = new Read_UART();
+        Thread UART_Thread = new Thread(UART);
+        UART_Thread.start();
             System.out.println("Nexa 1 On");
-            //udp.SendPacket("ND1M1");
-            Read();
+         //udp.SendPacket("ND1M1");
         });
-    } 
-    static void Read() {				
-		SerialPort port = SerialPort.getCommPort("/dev/cu.usbmodem1411");
-		port.openPort();
-		port.openPort();
-		port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
-		InputStream in = port.getInputStream();
-		try
-		{
-			while(true){
-				System.out.print((char)in.read());
-				if(false)
-					break;
-			}
-			in.close();
-		} catch (Exception e) { e.printStackTrace(); }
-		port.closePort();
-	}
-    
+    }
 }
