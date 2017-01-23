@@ -31,7 +31,8 @@ public class DashboardController implements Initializable {
     private Label ThreadStat;
     Read_UART UART = new Read_UART();
     Thread UART_Thread = new Thread(UART);
-    boolean ThreadRunning = false;     
+    boolean ThreadRunning = false;  
+    boolean ThreadSuspended = false;
     @FXML
     private void handleButtonAction(ActionEvent event) {
 
@@ -46,13 +47,24 @@ public class DashboardController implements Initializable {
         }else{
         UART_Thread.resume();
         }
+        Stop.setText("Suspend");
+        ThreadSuspended = true;
         ThreadStat.setText("Runnig");
         });
         
         Stop.setOnAction((event) -> {
-        UART_Thread.suspend();
-        ThreadStat.setText("Stoped");
-         //udp.SendPacket("ND1M1");
+            if(ThreadSuspended){
+            UART_Thread.suspend();
+            Stop.setText("Stop");
+            ThreadSuspended = false;
+            ThreadStat.setText("Suspended");
+            }
+            
+            if(!ThreadSuspended){
+                UART_Thread.stop();
+            ThreadStat.setText("Stoped");
+            }
         });
     }
+
 }
