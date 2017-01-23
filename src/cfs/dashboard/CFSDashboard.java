@@ -23,6 +23,8 @@ public class CFSDashboard extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         
+
+        
         Scene scene = new Scene(root);
         stage.setScene(scene);
                 stage.setTitle("CFS Dashboard");
