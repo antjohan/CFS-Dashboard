@@ -12,22 +12,22 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
 /**
  *
  * @author Anton
  */
 public class CFSDashboard extends Application {
-    
+
     @Override
     public void start(Stage stage) throws Exception {
+        Read_UART UART = new Read_UART();
+        Thread UART_Thread = new Thread(UART);
+        UART_Thread.start();
         Parent root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
-        
 
-        
         Scene scene = new Scene(root);
         stage.setScene(scene);
-                stage.setTitle("CFS Dashboard");
+        stage.setTitle("CFS Dashboard");
 
         stage.show();
     }
@@ -37,13 +37,7 @@ public class CFSDashboard extends Application {
      */
     public static void main(String[] args) {
         launch(args);
-        
-    }
-    
-  
-         
 
-    
-    
-    
+    }
+
 }

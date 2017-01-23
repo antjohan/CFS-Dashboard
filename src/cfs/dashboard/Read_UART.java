@@ -16,14 +16,21 @@ import java.util.logging.Logger;
  */
 public class Read_UART implements Runnable {
 
+    public static String input;
+
     public void run() {
         Read();
     }
-    static private boolean stop = false;
+    static private boolean stop = true;
     static private boolean exit = false;
 
     static void Read() {
-        SerialPort port = SerialPort.getCommPort("/dev/cu.usbmodem1411");
+        SerialPort[] Ports = SerialPort.getCommPorts();
+        for (int i = 0; i < Ports.length; i++) {
+            String strPorts = Ports[i].getDescriptivePortName();
+            System.out.println(strPorts);
+        }
+        SerialPort port = Ports[4];
         while (true) {
 
             if (!stop) {
@@ -32,7 +39,14 @@ public class Read_UART implements Runnable {
                 InputStream in = port.getInputStream();
                 try {
                     while (true) {
-                        System.out.print((char) in.read());
+                        char str = (char)in.read();
+                        input = input + str;
+                        if(input.contains("\n")){
+                           System.out.print(input);
+                           input = "";
+
+                        }
+                        //System.out.print((char) in.read());
                         if (stop) {
                             break;
                         }
@@ -64,6 +78,7 @@ public class Read_UART implements Runnable {
     }
 
     static void Exit() {
+        stop = false;
         exit = true;
     }
 }

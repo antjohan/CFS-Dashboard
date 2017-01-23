@@ -12,9 +12,9 @@
       <TextField layoutX="133.0" layoutY="27.0" />
       <TextField layoutX="124.0" layoutY="93.0" prefHeight="17.0" prefWidth="48.0" />
       <Label layoutX="70.0" layoutY="98.0" text="Topics:" />
-      <Button fx:id="Start" layoutX="316.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Start" />
+      <Button fx:id="Start" layoutX="316.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Open" />
       <Label fx:id="Output" layoutX="126.0" layoutY="68.0" text="XX-XX-XX-XX-XX-XX" />
-      <Button fx:id="Stop" layoutX="316.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Suspend" />
+      <Button fx:id="Stop" layoutX="316.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Exit" />
       <CheckBox layoutX="210.0" layoutY="98.0" mnemonicParsing="false" text="CheckBox" />
       <ComboBox layoutX="178.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 8" />
       <ComboBox layoutX="342.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 15" />
@@ -37,6 +37,6 @@
       <ComboBox layoutX="342.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 19" />
       <ComboBox layoutX="342.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 20" />
       <ComboBox layoutX="342.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 21" />
-      <Label fx:id="ThreadStat" layoutX="406.0" layoutY="32.0" text="Stoped" />
+      <Label fx:id="ThreadStat" layoutX="406.0" layoutY="32.0" />
    </children>
 </AnchorPane>

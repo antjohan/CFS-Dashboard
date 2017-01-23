@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 
 public class DashboardController implements Initializable {
 
@@ -27,8 +28,7 @@ public class DashboardController implements Initializable {
 
     @FXML
     private Label ThreadStat;
-    Read_UART UART = new Read_UART();
-    Thread UART_Thread = new Thread(UART);
+
     boolean ThreadRunning = false;
     boolean ThreadSuspended = false;
 
@@ -39,36 +39,26 @@ public class DashboardController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
         Start.setOnAction((event) -> {
             if (!ThreadRunning) {
-                UART_Thread.start();
+                Read_UART.Resume();
+                ThreadStat.setText("Port Open");
+                ThreadStat.setTextFill(Color.GREEN);
+                Start.setText("Close");
                 ThreadRunning = true;
+            } else {
+                Read_UART.Stop();
+                ThreadStat.setText("Port Closed");
+                ThreadStat.setTextFill(Color.RED);
+                Start.setText("Open");
+                ThreadRunning = false;
             }
-            Read_UART.Resume();
-            ThreadStat.setText("Runnig");
-            Stop.setText("Suspend");
-
-            ThreadSuspended = false;
-
         });
 
         Stop.setOnAction((event) -> {
-            if (ThreadSuspended) {
-                //UART_Thread.interrupt();
-                Read_UART.Exit();
-                ThreadStat.setText("closed");
 
-            } else {
-                Read_UART.Stop();
-                ThreadSuspended = true;
-                ThreadStat.setText("Suspended");
-                Stop.setText("Stop");
-
-            }
-            //UART_Thread.interrupt();
-            System.out.println("1");
-
+            Read_UART.Exit();
+            ThreadStat.setText("Thread terminated");
         });
     }
 
