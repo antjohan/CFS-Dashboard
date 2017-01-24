@@ -9,6 +9,11 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.io.InputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.*;
+import javafx.fxml.*;
+import javafx.scene.Parent;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
 
 /**
  *
@@ -17,6 +22,10 @@ import java.util.logging.Logger;
 public class Read_UART implements Runnable {
 
     public static String input;
+    public static String output[] = new String[10];
+    public static boolean uppdate = false;
+    public static ArrayList portsList = new ArrayList();
+    static String ComPort;
 
     public void run() {
         Read();
@@ -25,32 +34,43 @@ public class Read_UART implements Runnable {
     static private boolean exit = false;
 
     static void Read() {
-        SerialPort[] Ports = SerialPort.getCommPorts();
-        for (int i = 0; i < Ports.length; i++) {
-            String strPorts = Ports[i].getDescriptivePortName();
-            System.out.println(strPorts);
-        }
-        SerialPort port = Ports[4];
+//SerialPort port = Ports[4];
         while (true) {
 
             if (!stop) {
+                //setPort("IOUSBHostDevice");
+                SerialPort[] Ports = SerialPort.getCommPorts();
+                SerialPort port = null;
+                for (SerialPort Port : Ports) {
+                    String strPorts = Port.getDescriptivePortName();
+                    if (strPorts.compareToIgnoreCase(ComPort) == 0) {
+                        port = Port;
+                    }
+                }                
                 port.openPort();
                 port.setComPortTimeouts(SerialPort.TIMEOUT_READ_SEMI_BLOCKING, 100, 0);
                 InputStream in = port.getInputStream();
                 try {
                     while (true) {
-                        char str = (char)in.read();
+                        char str = (char) in.read();
                         input = input + str;
-                        if(input.contains("\n")){
-                           System.out.print(input);
-                           input = "";
-
+                        if (input.contains("\n")) {
+                            int i = 0;
+                            while (input.contains("-")) {
+                                int index = input.indexOf("-");
+                                output[i] = input.substring(0, index);
+                                input = input.substring(index + 1, input.length());
+                                i++;
+                            }
+                            output[i] = input;
+                            uppdate = true;
+                            input = "";
                         }
-                        //System.out.print((char) in.read());
                         if (stop) {
                             break;
                         }
                     }
+                    System.out.println("stoped");
                     in.close();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -69,6 +89,19 @@ public class Read_UART implements Runnable {
         }
     }
 
+    static void getPorts() {
+        SerialPort[] Ports = SerialPort.getCommPorts();
+        portsList.removeAll(portsList);
+        for (SerialPort Port : Ports) {
+            String strPort = Port.getDescriptivePortName();
+            portsList.add(strPort);
+        }
+    }
+
+    static void setPort(String str) {
+        ComPort = str;
+    }
+
     static void Stop() {
         stop = true;
     }
@@ -78,7 +111,6 @@ public class Read_UART implements Runnable {
     }
 
     static void Exit() {
-        stop = false;
         exit = true;
     }
 }

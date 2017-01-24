@@ -5,12 +5,16 @@
  */
 package cfs.dashboard;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-import javafx.fxml.FXMLLoader;
+import javafx.fxml.*;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.scene.*;
 
 /**
  *
@@ -28,7 +32,6 @@ public class CFSDashboard extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("CFS Dashboard");
-
         stage.show();
     }
 

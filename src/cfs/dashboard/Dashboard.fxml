@@ -1,42 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="459.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cfs.dashboard.DashboardController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="442.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cfs.dashboard.DashboardController">
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1d5e96" height="443.0" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="551.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffdfd" height="69.0" layoutX="48.0" layoutY="19.0" stroke="#abaaaa" strokeType="INSIDE" width="455.0" />
+      <Pane layoutX="8.0" layoutY="109.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffdfd" height="270.0" stroke="#abaaaa" strokeType="INSIDE" width="260.0" />
+            <Pane layoutX="8.0" layoutY="47.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor1_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Label layoutX="8.0" layoutY="17.0" text="Sensor">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="8.0" layoutY="134.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor3_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="178.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 4">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor4_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Label layoutX="143.0" layoutY="17.0" text="Current Value">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="8.0" layoutY="90.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor2_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="222.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor5_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
       <Label layoutX="53.0" layoutY="32.0" text="Serial Port:" />
-      <TextField layoutX="133.0" layoutY="27.0" />
-      <TextField layoutX="124.0" layoutY="93.0" prefHeight="17.0" prefWidth="48.0" />
-      <Label layoutX="70.0" layoutY="98.0" text="Topics:" />
-      <Button fx:id="Start" layoutX="316.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Open" />
-      <Label fx:id="Output" layoutX="126.0" layoutY="68.0" text="XX-XX-XX-XX-XX-XX" />
-      <Button fx:id="Stop" layoutX="316.0" layoutY="63.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Exit" />
-      <CheckBox layoutX="210.0" layoutY="98.0" mnemonicParsing="false" text="CheckBox" />
-      <ComboBox layoutX="178.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 8" />
-      <ComboBox layoutX="342.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 15" />
-      <ComboBox layoutX="178.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 9" />
-      <ComboBox layoutX="178.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 10" />
-      <ComboBox layoutX="178.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 11" />
-      <ComboBox layoutX="178.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 12" />
-      <ComboBox layoutX="178.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 13" />
-      <ComboBox layoutX="14.0" layoutY="143.0" prefWidth="150.0" promptText="sensor 1" />
-      <ComboBox layoutX="14.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 2" />
-      <ComboBox layoutX="14.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 3" />
-      <ComboBox layoutX="14.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 4" />
-      <ComboBox layoutX="14.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 5" />
-      <ComboBox layoutX="14.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 6" />
-      <ComboBox layoutX="14.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 7" />
-      <ComboBox layoutX="178.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 14" />
-      <ComboBox layoutX="342.0" layoutY="184.0" prefWidth="150.0" promptText="sensor 16" />
-      <ComboBox layoutX="342.0" layoutY="230.0" prefWidth="150.0" promptText="sensor 17" />
-      <ComboBox layoutX="342.0" layoutY="274.0" prefWidth="150.0" promptText="sensor 18" />
-      <ComboBox layoutX="342.0" layoutY="318.0" prefWidth="150.0" promptText="sensor 19" />
-      <ComboBox layoutX="342.0" layoutY="362.0" prefWidth="150.0" promptText="sensor 20" />
-      <ComboBox layoutX="342.0" layoutY="407.0" prefWidth="150.0" promptText="sensor 21" />
-      <Label fx:id="ThreadStat" layoutX="406.0" layoutY="32.0" />
+      <Button fx:id="Start" layoutX="420.0" layoutY="25.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Open" />
+      <Button fx:id="Stop" layoutX="420.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="76.0" text="Exit" />
+      <Label fx:id="ThreadStat" layoutX="126.0" layoutY="61.0" text="Port Closed" textFill="RED">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <ComboBox fx:id="Port" layoutX="126.0" layoutY="27.0" prefWidth="150.0" promptText="COM Port" />
+      <Pane layoutX="282.0" layoutY="109.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fffdfd" height="270.0" stroke="#abaaaa" strokeType="INSIDE" width="260.0" />
+            <Pane layoutX="8.0" layoutY="47.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor6_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Label layoutX="7.0" layoutY="17.0" text="Sensor">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="8.0" layoutY="134.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 8">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor8_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="178.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 9">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor9_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Label layoutX="143.0" layoutY="17.0" text="Current Value">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Pane layoutX="8.0" layoutY="90.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 7">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor7_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="222.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
+                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 10">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </ComboBox>
+                  <Label fx:id="Sensor10_Output" layoutX="139.0" layoutY="8.0" text="---Values---" textAlignment="CENTER">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="4.0" arcWidth="5.0" height="36.0" layoutX="133.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label layoutX="77.0" layoutY="63.0" text="Status:" />
+      <Button fx:id="findPorts" layoutX="276.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="27.0" prefWidth="94.0" text="Find Ports" />
+      <ImageView fitHeight="43.0" fitWidth="336.0" layoutX="148.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/Users/Anton/GitHub/CFS%20Dashboard/White_CFS.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
