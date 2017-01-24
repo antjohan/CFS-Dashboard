@@ -42,7 +42,7 @@
             <Pane layoutX="8.0" layoutY="134.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 3">
+                  <ComboBox fx:id="sensor3" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 3">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -58,7 +58,7 @@
             <Pane layoutX="8.0" layoutY="178.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 4">
+                  <ComboBox fx:id="sensor4" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 4">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -79,7 +79,7 @@
             <Pane layoutX="8.0" layoutY="90.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 2">
+                  <ComboBox fx:id="sensor2" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 2">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -95,7 +95,7 @@
             <Pane layoutX="8.0" layoutY="222.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 6">
+                  <ComboBox fx:id="sensor5" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 5">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -124,7 +124,7 @@
             <Pane layoutX="8.0" layoutY="47.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 6">
+                  <ComboBox fx:id="sensor6" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 6">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -145,7 +145,7 @@
             <Pane layoutX="8.0" layoutY="134.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 8">
+                  <ComboBox fx:id="sensor8" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 8">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -161,7 +161,7 @@
             <Pane layoutX="8.0" layoutY="178.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 9">
+                  <ComboBox fx:id="sensor9" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 9">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -182,7 +182,7 @@
             <Pane layoutX="8.0" layoutY="90.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 7">
+                  <ComboBox fx:id="sensor7" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 7">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -198,7 +198,7 @@
             <Pane layoutX="8.0" layoutY="222.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e8ebee" height="36.0" opacity="0.74" stroke="BLACK" strokeType="INSIDE" width="244.0" />
-                  <ComboBox layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 10">
+                  <ComboBox fx:id="sensor10" layoutX="4.0" layoutY="5.0" prefHeight="25.0" prefWidth="124.0" promptText="sensor 10">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>

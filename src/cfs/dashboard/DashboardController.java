@@ -16,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.animation.*;
 import javafx.util.Duration;
+import java.util.*;
 
 public class DashboardController implements Initializable {
 
@@ -49,8 +50,26 @@ public class DashboardController implements Initializable {
     private Label Sensor10_Output;
     @FXML
     private ComboBox Port;
-   @FXML
+    @FXML
     private ComboBox sensor1;
+    @FXML
+    private ComboBox sensor2;
+    @FXML
+    private ComboBox sensor3;
+    @FXML
+    private ComboBox sensor4;
+    @FXML
+    private ComboBox sensor5;
+    @FXML
+    private ComboBox sensor6;
+    @FXML
+    private ComboBox sensor7;
+    @FXML
+    private ComboBox sensor8;
+    @FXML
+    private ComboBox sensor9;
+    @FXML
+    private ComboBox sensor10;
 
     @FXML
     private Label ThreadStat;
@@ -62,6 +81,7 @@ public class DashboardController implements Initializable {
     boolean ThreadRunning = false;
     boolean ThreadSuspended = false;
     public String SelectedPort;
+    public static ArrayList<String> sensorlist = new ArrayList();
 
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -127,7 +147,26 @@ public class DashboardController implements Initializable {
         });
     }
     private void setTopics(){
-        
+        sensorlist.add("sensor1");
+        sensorlist.add("sensor2");
+        sensorlist.add("sensor3");
+        sensorlist.add("sensor4");
+        sensorlist.add("sensor5");
+        sensorlist.add("sensor6");
+        sensorlist.add("sensor7");
+        sensorlist.add("sensor8");
+        sensorlist.add("sensor9");
+        sensorlist.add("sensor10");
+        sensor1.getItems().addAll(sensorlist);
+        sensor2.getItems().addAll(sensorlist);
+        sensor3.getItems().addAll(sensorlist);
+        sensor4.getItems().addAll(sensorlist);
+        sensor5.getItems().addAll(sensorlist);
+        sensor6.getItems().addAll(sensorlist);
+        sensor7.getItems().addAll(sensorlist);
+        sensor8.getItems().addAll(sensorlist);
+        sensor9.getItems().addAll(sensorlist);
+        sensor10.getItems().addAll(sensorlist);
     }
     private void update() {
         if (Read_UART.uppdate) {
