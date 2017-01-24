@@ -70,7 +70,6 @@ public class Read_UART implements Runnable {
                             break;
                         }
                     }
-                    System.out.println("stoped");
                     in.close();
                 } catch (Exception e) {
                     e.printStackTrace();

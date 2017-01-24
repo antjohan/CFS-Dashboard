@@ -49,6 +49,8 @@ public class DashboardController implements Initializable {
     private Label Sensor10_Output;
     @FXML
     private ComboBox Port;
+   @FXML
+    private ComboBox sensor1;
 
     @FXML
     private Label ThreadStat;
@@ -112,6 +114,7 @@ public class DashboardController implements Initializable {
             Read_UART.getPorts();
             Port.getItems().removeAll(Port.getItems());
             Port.getItems().addAll(Read_UART.portsList);
+            setTopics();
 
         });
     }
@@ -123,7 +126,9 @@ public class DashboardController implements Initializable {
             uppdateAnimation.playFromStart();
         });
     }
-
+    private void setTopics(){
+        
+    }
     private void update() {
         if (Read_UART.uppdate) {
             Sensor1_Output.setText(Read_UART.output[0]);
